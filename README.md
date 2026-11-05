@@ -1,35 +1,27 @@
 # Aethrix
 
-A suite of plugins for [openac-rust](https://github.com/eriknihlen/openac-rust), the Asheron's Call client written in Rust. Each plugin does one job and runs on its own; plugins built to work together call each other through the client's plugin services.
+Aethrix is a suite of plugins for [openac-rust](https://github.com/eriknihlen/openac-rust), the Asheron's Call client written in Rust. It's designed to automate parts of play and to bring quality of life improvements, with each plugin doing one job and running on its own.
 
-This repository holds releases only. The source is private for now, and we intend to open-source it once the suite is feature complete.
+This repository holds the suite's releases. The source is private for now, and we intend to open-source it once the suite is feature complete.
 
-## The plugins
+## Aethrix Vision
 
-| Plugin | What it does | Status |
-|---|---|---|
-| **Aethrix Vision** | Finds the objects and people you're watching for, marks them in the world with labels and gems, shows them on a HUD, and shades ground you can't walk on | First release coming |
-| **Aethrix Combat** | Fights for you: melee, healing and stamina kits, walking to creatures, hunting dungeons and planned routes | In development |
-| **Aethrix Atlas** | Maps, routes, waypoints and travel | Planned |
-| **Aethrix Loot**, **Aethrix Buffs** | Judging and sorting loot; keeping buffs up | Planned |
+Vision is the first plugin in the suite, and this is its first version, **0.1.0**.
 
-Each plugin is released as soon as it's ready, starting small and growing.
+Vision finds the objects and people you're watching for. You tell it what to look for with searches, by name, by kind, by object class or by a pattern, and it:
+
+- marks each find in the world with a gem and a label showing its name and distance, in its search's colour;
+- lists what it has found in its window, where you can select a find or ignore it;
+- shows the nearest finds on a HUD, with an arrow pointing to each one, and a toast when something new appears;
+- tells you in chat when a search finds something;
+- can shade the ground you can't walk on, such as cliffs and open sea.
+
+Open it with `/vision`, or `/av` for short. Every setting has a sensible default and can be changed in its settings window; the [wiki](https://github.com/davidc-smith/OpenAC-Aethrix/wiki) lists them all.
 
 ## Installing
 
-1. In the openac-rust launcher, open the plugin list and choose **Add from URL**.
-2. Enter `https://github.com/davidc-smith/OpenAC-Aethrix`.
-3. The launcher lists the suite's plugins that aren't installed yet. Pick one; it asks again for the rest until you cancel.
-4. A new plugin is installed **disabled**. Enable it in the plugin list.
+Install Aethrix Vision from the openac-rust launcher's plugin list.
 
-The launcher checks this repository for updates. Put a plugin on the **Beta** channel to be offered its pre-release versions too.
+## Problems
 
-Every plugin needs launcher and client **0.1.11** or later. Older launchers don't see the suite's releases.
-
-## Reporting a problem
-
-Each plugin keeps its recent activity in memory while you play. When something goes wrong, run its report command, for example `/vision report`. It writes a file and says in chat where it is. Open an issue here with that file, what went wrong and about when.
-
-## Releases
-
-Each plugin has its own versions and tags, `wasm-<plugin id>-v<version>`, for example `wasm-rabiddee.aethrix-vision-v0.1.0`. The `wasm-index` release holds `plugins-index.json`, which points the launcher at each plugin's latest stable and beta release.
+If something goes wrong, Vision can write a problem report to send us with an issue.
