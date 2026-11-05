@@ -16,7 +16,7 @@ Vision finds the objects and people you're watching for. You tell it what to loo
 - tells you in chat when a search finds something;
 - can shade the ground you can't walk on, such as cliffs and open sea.
 
-Open it with `/vision`, or `/av` for short. Every setting has a sensible default and can be changed in its settings window; the [wiki](https://github.com/davidc-smith/OpenAC-Aethrix/wiki) lists them all.
+Its commands start with `/vision` or `/av`; the two are the same. `/vision window` or `/av window` opens its window, as does its icon in the dock. Every setting has a sensible default and can be changed in its settings window; the [wiki](https://github.com/davidc-smith/OpenAC-Aethrix/wiki) lists them all.
 
 ## Installing
 
